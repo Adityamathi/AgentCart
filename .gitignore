@@ -1,0 +1,16 @@
+node_modules/
+dist/
+dist-ssr/
+*.local
+.env
+.env.*
+!.env.example
+server/data/
+.scratch/
+coverage/
+*.log
+.DS_Store
+.vercel
+.vscode/
+unslop-story/
+unslop-story.mp4

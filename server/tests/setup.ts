@@ -1,0 +1,10 @@
+process.env.NODE_ENV = 'test';
+process.env.SQLITE_PATH = ':memory:';
+process.env.DATABASE_URL = '';
+process.env.SESSION_SECRET = 'test-session-secret-not-for-production';
+process.env.AI_PROVIDER = 'heuristic';
+process.env.PAYPAL_CLIENT_ID = '';
+process.env.PAYPAL_CLIENT_SECRET = '';
+process.env.PAYPAL_WEBHOOK_ID = '';
+process.env.SHIPPING_FLAT_CENTS = '0';
+process.env.TAX_RATE_BPS = '0';

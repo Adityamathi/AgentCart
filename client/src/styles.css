@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+    font-feature-settings: 'ss01' 1;
+  }
+
+  ::selection {
+    background: #dfe3fb;
+    color: #1f1b16;
+  }
+
+  :focus-visible {
+    outline: 2px solid #1f3ed9;
+    outline-offset: 2px;
+  }
+
+  ::placeholder {
+    @apply text-ink-3;
+    opacity: 1;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(31, 27, 22, 0.2) transparent;
+  }
+
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: rgba(31, 27, 22, 0.18);
+    border-radius: 4px;
+  }
+}
+
+@layer utilities {
+  .tnum {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* The signature detail: a hairline rule with square ticks. */
+  .tick-rule {
+    position: relative;
+  }
+  .tick-rule::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: rgba(31, 27, 22, 0.14);
+  }
+
+  .tick::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 5px;
+    height: 5px;
+    background: #1f1b16;
+  }
+
+  .receipt-edge {
+    background-image: repeating-linear-gradient(
+      to right,
+      rgba(31, 27, 22, 0.14) 0,
+      rgba(31, 27, 22, 0.14) 4px,
+      transparent 4px,
+      transparent 8px
+    );
+    height: 1px;
+  }
+
+  .grid-plate {
+    background-image:
+      linear-gradient(to right, rgba(31, 27, 22, 0.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(31, 27, 22, 0.045) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
